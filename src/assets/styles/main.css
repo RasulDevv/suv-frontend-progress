@@ -1,0 +1,26 @@
+@import "./fonts.css";
+@import "./organisms/navbar.css";
+@import "./organisms/header.css";
+@import "./molecules/navToggle.css";
+@import "./molecules/navList.css";
+@import "./molecules/navLang.css";
+@import "./pages/home.css";
+@import "./layouts/mainLayout.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'inter';
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}

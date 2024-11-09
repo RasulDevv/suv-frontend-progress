@@ -1,0 +1,34 @@
+.nav {
+    padding: 5px 0;
+}
+
+.nav-container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row-reverse;
+    }
+}
