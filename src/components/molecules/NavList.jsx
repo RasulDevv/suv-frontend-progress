@@ -6,16 +6,16 @@ export default function NavList({isOpen,setIsOpen}) {
   return (
     <ul className={`nav-list ${isOpen ? 'open' : ''}`}>
         <li>
-            <NavLink to="/" onClick={() => toggleMenu(isOpen, setIsOpen)} className={({isActive}) => isActive ? "nav-link-active" : "nav-link"}>Home</NavLink>
+            <NavLink to="/" onClick={() => toggleMenu(isOpen, setIsOpen)} className={({isActive}) => isActive ? "nav-link-active nav-link" : "nav-link"}>Home</NavLink>
         </li>
         <li>
-            <NavLink to="about-sensors" onClick={() => toggleMenu(isOpen, setIsOpen)} className={({isActive}) => isActive ? "nav-link-active" : "nav-link"}>About Sensors</NavLink>
+            <NavLink to="about-sensors" onClick={() => toggleMenu(isOpen, setIsOpen)} className={({isActive}) => isActive ? "nav-link-active nav-link" : "nav-link"}>About Sensors</NavLink>
         </li>
         <li>
-            <NavLink to="about-us" onClick={() => toggleMenu(isOpen, setIsOpen)} className={({isActive}) => isActive ? "nav-link-active" : "nav-link"}>About Us</NavLink>
+            <NavLink to="about-us" onClick={() => toggleMenu(isOpen, setIsOpen)} className={({isActive}) => isActive ? "nav-link-active nav-link" : "nav-link"}>About Us</NavLink>
         </li>
         <li>
-            <NavLink to="contact" onClick={() => toggleMenu(isOpen, setIsOpen)} className={({isActive}) => isActive ? "nav-link-active" : "nav-link"}>Contact</NavLink>
+            <NavLink to="contact" onClick={() => toggleMenu(isOpen, setIsOpen)} className={({isActive}) => isActive ? "nav-link-active nav-link" : "nav-link"}>Contact</NavLink>
         </li>
         <li>
             <NavLang />
