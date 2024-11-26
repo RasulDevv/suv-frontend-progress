@@ -1,6 +1,3 @@
-import { Suspense, useEffect, useState } from "react"
-
-
 const arr = [
   {
     "_id": "672b3e2ddcd4b9bb278439f9",
@@ -43,15 +40,6 @@ const arr = [
 
 
 export default function AboutSensors() {
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    fetch('https://suv-backend.onrender.com/about-sensors')
-    .then(res => res.json())
-    .then(data => setData(data))
-    .catch(err => console.log(err))
-  }, [])
-  
   return (
     <div className="about-sensors-page">
       <table className="about-sensors-table">
