@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.jpg";
 import toggleMenu from "../../utils/toggleMenu";
-import NavToggle from "../molecules/navToggle";
+import NavToggle from "../molecules/NavToggle";
 import { useState } from "react";
 import NavList from "../molecules/NavList";
 
