@@ -9,7 +9,7 @@ export default function MainLayout() {
       <div className="wrapper">
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

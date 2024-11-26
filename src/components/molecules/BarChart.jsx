@@ -1,21 +1,38 @@
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+import React, { useState, useEffect } from 'react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+const BarChart = () => {
+  const [sensorData, setSensorData] = useState([]);
 
-const data = {
-  labels: ['Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'Iyun', 'Iyul', 'Avgust', 'Sentabr', 'Oktabr', 'Noyabr', 'Dekabr'],
-  datasets: [
-    {
-      label: 'Sotuvlar',
-      data: [400, 300, 500],
-      backgroundColor: 'rgba(75, 192, 192, 0.6)',
-    },
-  ],
+  const getSensorData = () => {
+    const newData = {
+      time: new Date().toLocaleTimeString(),
+      sensor1: Math.random() * 20,
+      sensor2: Math.random() * 50
+    };
+    setSensorData((prevData) => [...prevData.slice(-50), newData]); // Oxirgi 50 qiymatni saqlash
+  };
+
+  useEffect(() => {
+    const interval = setInterval(getSensorData, 1000); // Har 1 soniyada yangilanadi
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div style={{ overflowX: 'scroll', overflowY: 'hidden', width: '100%' }}>
+      <div style={{ width: '2400px' }}>
+        <LineChart width={2400} height={400} data={sensorData}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="time" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="sensor1" stroke="red" name="PH" />
+          <Line type="monotone" dataKey="sensor2" stroke="blue" name="LOYQALIK" />
+        </LineChart>
+      </div>
+    </div>
+  );
 };
-
-function BarChart() {
-  return <Bar data={data} />;
-}
 
 export default BarChart;

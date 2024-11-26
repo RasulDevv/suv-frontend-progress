@@ -4,6 +4,7 @@ import AboutSensors from "../components/pages/AboutSensors";
 import AboutUs from "../components/pages/AboutUs";
 import Home from "../components/pages/Home";
 import Contact from "../components/pages/Contact";
+import District from "../components/pages/District";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />
+      },
+      {
+        path: "d/Olmazor",
+        element: <District d={"olmazor"} />
+      },
+      {
+        path: "d/Chilonzor",
+        element: <District d={"chilonzor"} />
       }
     ]
   }

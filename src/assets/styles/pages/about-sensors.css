@@ -1,0 +1,26 @@
+.about-sensors-table td, .about-sensors-table th {
+    /* border-bottom: 1px solid #000; */
+    padding: 5px 15px;
+    text-align: left;
+}
+
+.about-sensors-table {
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.about-sensors-table th, .about-sensors-table td {
+    border-left: 1px solid #000;
+}
+
+.about-sensors-table th:first-child, .about-sensors-table td:first-child {
+    border-left: none;
+}
+
+@media (max-width: 768px) {
+    .about-sensors-table td, .about-sensors-table th {
+        border-bottom: 1px solid #000;
+        padding: 2.5px 7.5px;
+        font-size: 10px;
+    }
+}

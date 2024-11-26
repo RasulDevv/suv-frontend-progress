@@ -33,6 +33,7 @@
     .nav-list {
         flex-direction: column;
         position: absolute;
+        z-index: 2;
         top: 60px;
         left: 0;
         height: 100vh;
