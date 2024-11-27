@@ -45,10 +45,10 @@ export default function AboutSensors() {
       <table className="about-sensors-table">
         <thead>
           <tr>
-            <th>name</th>
-            <th>accuracy</th>
-            <th>range</th>
-            <th>normal range</th>
+            <th>datchik</th>
+            <th>aniqligi</th>
+            <th>daipazon</th>
+            <th>normal daipazon</th>
           </tr>
         </thead>
         <tbody>
